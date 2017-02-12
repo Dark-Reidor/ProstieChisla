@@ -1,0 +1,26 @@
+<!DOCTIPE html>
+<html>
+	<body>
+		<input type='text' id = 'field'>
+		<button id= 'btn'>Prime?</button>
+		<script>
+			var field = document.getElementById('field');
+			var btn = document.getElementById('btn');
+
+			function IsPrime(n) {
+				var k;
+				debugger;
+				for (var k = 2; k*k <= n; k++) {
+					if(n % k == 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+			btn.addEventListener('click', function() {
+				var n=Number(field.value);
+				alert(IsPrime(n));
+			})
+		</script>
+	</body>
+</html>
